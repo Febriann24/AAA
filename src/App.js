@@ -1,17 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes
-import LoginSignup from './LoginSignup';
-import Home from './Home';
+import Home from './components/Home'
+import { BrowserRouter as Router, Routes, Route, Link, Switch } from "react-router-dom";
 
-const App = () => {
-    return (
-        <Router>
-            <Routes> {/* Gunakan Routes di sini */}
-                <Route path="/" element={<LoginSignup />} /> {/* Gunakan element prop */}
-                <Route path="/home" element={<Home />} /> {/* Gunakan element prop */}
-            </Routes>
-        </Router>
-    );
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route exact path='/' element = {<Home/>} />
+        {/* <Route path='form' element= {<Form/>} /> */}
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
